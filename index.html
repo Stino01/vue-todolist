@@ -12,7 +12,10 @@
 <body>
     <div id="app">
         <ul>
-            <li @click="" v-for="(obj, index) in oggetti">{{obj.text}}<i @click="remove(index)" class="fa-solid fa-xmark"></i></li>
+            <li :class="{'line' : obj.check}" v-for="(obj, index) in oggetti">
+                <span @click="obj.check = !obj.check">{{obj.text}}</span>
+                <i @click="remove(index)" class="fa-solid fa-xmark"></i>
+            </li>
         </ul>
         <input @keyup.enter="add" type="text" ref="value" v-model="nuovoObj">
         <button @click="add">Aggiungi alla lista</button>

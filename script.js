@@ -4,15 +4,15 @@ const app = new Vue({
         oggetti: [
             {
                 text: 'Comprare il latte',
-                done: false,
+                check: true,
             },
             {
                 text: 'Stendere la lavatrice',
-                done: false,
+                check: false,
             },
             {
                 text: 'Pulire la camera',
-                done: false,
+                check: false,
             }
         ],
         nuovoObj: ''
@@ -24,13 +24,9 @@ const app = new Vue({
         add(){
             const newObj = {
                 text: this.nuovoObj, 
-                check: true,
+                check: false,
             }
             this.oggetti.push(newObj)
         }
     }
 })
-
-//Stampare all'interno di una lista, un item per ogni todo e se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
-
-//BONUS 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
