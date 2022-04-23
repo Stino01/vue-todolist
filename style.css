@@ -15,11 +15,11 @@ body {
 
 #app {
     width: 60vw;
-    height: 60vh;
     margin: 20vh auto;
     background-color: #EBEEEC;
     box-shadow: 7px 7px 5px 1px #8A8083;
     border-radius: 20px;
+    padding: 10vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
